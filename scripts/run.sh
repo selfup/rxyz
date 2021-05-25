@@ -22,4 +22,4 @@ rm tdc
 rm eap
 rm pc
 
-echo '--- done!'
+echo '--- done'

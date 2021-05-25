@@ -6,7 +6,7 @@ Just an experiment!
 
 ### Example Use
 
-```bash
+```
 $ ./scripts/run.sh
 --- building bins
 --- bins built
@@ -18,5 +18,5 @@ $ ./scripts/run.sh
 2021/05/25 16:35:57 --- Total precompressed payload byte size: 11000
 2021/05/25 16:35:57 --- Total precompressed output size: 8658
 --- removing bins
---- done!
+--- done
 ```
