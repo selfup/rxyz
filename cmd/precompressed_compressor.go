@@ -20,7 +20,7 @@ func main() {
 
 	ioutil.WriteFile("fixtures/precompressed_output.txt.gz", finalBytes, 0666)
 
-	log.Println("--- Total payload byte size:", len(file))
+	log.Println("--- Total precompressed payload byte size:", len(file))
 
-	log.Println("--- Total output size:", len(finalBytes))
+	log.Println("--- Total precompressed output size:", len(finalBytes))
 }

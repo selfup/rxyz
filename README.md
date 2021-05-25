@@ -6,24 +6,17 @@ Just an experiment!
 
 ### Example Use
 
----
-
-Generate data and compress with regular gzip:
-
 ```bash
-$ go run cmd/test_data_generator.go && go run cmd/test_data_compressor.go /*
-2021/05/25 07:04:55 --- input chars length: 74
-2021/05/25 07:04:55 --- 11k of random random bytes written
-2021/05/25 07:04:55 --- Total payload byte size: 11000
-2021/05/25 07:04:55 --- Total output size: 8662
-```
-
----
-
-Grab generated data (from disk), expand size but reduce complexity, then gzip:
-
-```bash
-go run cmd/extract_and_precompress.go && go run cmd/precompressed_compressor.go
-2021/05/25 07:05:00 --- Total payload byte size: 11000
-2021/05/25 07:05:00 --- Total output size: 8663
+$ ./scripts/run.sh
+--- building bins
+--- bins built
+--- executing bins
+2021/05/25 16:35:57 --- input chars length: 74
+2021/05/25 16:35:57 --- 11k of random random bytes written
+2021/05/25 16:35:57 --- Total payload byte size: 11000
+2021/05/25 16:35:57 --- Total output size: 8657
+2021/05/25 16:35:57 --- Total precompressed payload byte size: 11000
+2021/05/25 16:35:57 --- Total precompressed output size: 8658
+--- removing bins
+--- done!
 ```
