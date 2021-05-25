@@ -78,6 +78,16 @@ func main() {
 	inputCharMap["_"] = "67"
 	inputCharMap["+"] = "71"
 	inputCharMap["="] = "72"
+	inputCharMap["1"] = "73"
+	inputCharMap["2"] = "74"
+	inputCharMap["3"] = "75"
+	inputCharMap["4"] = "76"
+	inputCharMap["5"] = "77"
+	inputCharMap["6"] = "78"
+	inputCharMap["7"] = "8"
+	inputCharMap["8"] = "08"
+	inputCharMap["9"] = "80"
+	inputCharMap["0"] = "81"
 
 	file, ferr := ioutil.ReadFile("fixtures/test_data.txt")
 
