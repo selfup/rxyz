@@ -12,13 +12,21 @@ import (
 func main() {
 	rand.Seed(time.Now().UnixNano())
 
-	inputChars := "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789./:@#!$*-_+="
+	inputCharsFile, icerr := ioutil.ReadFile("chars/input.txt")
+
+	if icerr != nil {
+		log.Fatal(icerr)
+	}
+
+	trimmedInputChars := strings.Trim(string(inputCharsFile), "\n")
+
+	inputChars := strings.Split(trimmedInputChars, "")
 
 	log.Println("--- input chars length:", len(inputChars))
 
 	var chars = []string{}
 
-	for _, inputChar := range strings.Split(inputChars, "") {
+	for _, inputChar := range inputChars {
 		chars = append(chars, inputChar)
 	}
 
