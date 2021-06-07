@@ -8,6 +8,13 @@ import (
 )
 
 func main() {
+	var err error = nil
+
+	err = os.MkdirAll("fixtures", os.ModePerm)
+	if err != nil {
+		log.Fatal(err)
+	}
+
 	fmt.Println("--- running files")
 
 	runTmp("cmd/test_data_generator.go")
