@@ -10,15 +10,17 @@ import (
 func main() {
 	inputCharMap := make(map[string]byte)
 
-	inputChars, icerr := ioutil.ReadFile("chars/input.txt")
+	charsInput, icErr := ioutil.ReadFile("chars/input.txt")
 
-	if icerr != nil {
-		log.Fatal(icerr)
+	if icErr != nil {
+		log.Fatal(icErr)
 	}
 
-	trimmedInputChars := strings.Trim(string(inputChars), "\n")
+	trimmedInputChars := strings.Trim(string(charsInput), "\n")
 
-	for idx, inputChar := range strings.Split(trimmedInputChars, "") {
+	inputChars := strings.Split(trimmedInputChars, "")
+
+	for idx, inputChar := range inputChars {
 		inputCharMap[inputChar] = byte(idx)
 	}
 
