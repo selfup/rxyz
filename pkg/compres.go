@@ -1,4 +1,4 @@
-package main
+package rxyz
 
 import (
 	"bytes"
@@ -7,7 +7,7 @@ import (
 	"log"
 )
 
-func main() {
+func Compress() {
 	file, _ := ioutil.ReadFile("fixtures/test_data.txt")
 
 	var b bytes.Buffer

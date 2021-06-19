@@ -1,4 +1,4 @@
-package main
+package rxyz
 
 import (
 	"io/fs"
@@ -9,7 +9,7 @@ import (
 	"time"
 )
 
-func main() {
+func Generate() {
 	totalBytes := 11000
 
 	rand.Seed(time.Now().UnixNano())
@@ -28,9 +28,7 @@ func main() {
 
 	var chars = []string{}
 
-	for _, inputChar := range inputChars {
-		chars = append(chars, inputChar)
-	}
+	chars = append(chars, inputChars...)
 
 	charsLen := len(chars)
 

@@ -1,4 +1,4 @@
-package main
+package rxyz
 
 import (
 	"io/fs"
@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-func main() {
+func Precompress() {
 	inputCharMap := make(map[string]byte)
 
 	charsInput, icErr := ioutil.ReadFile("chars/input.txt")
