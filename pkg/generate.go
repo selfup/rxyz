@@ -22,18 +22,14 @@ func Generate(charSet string, totalBytes int, inputFilePath string) {
 
 	log.Println("--- input chars length:", len(inputChars))
 
-	var chars = []string{}
-
-	chars = append(chars, inputChars...)
-
-	charsLen := len(chars)
+	charsLen := len(inputChars)
 
 	output := ""
 
 	for i := 0; i < totalBytes; i++ {
 		idx := rand.Intn(charsLen)
 
-		char := chars[idx]
+		char := inputChars[idx]
 
 		output += char
 	}
