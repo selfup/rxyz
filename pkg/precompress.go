@@ -12,6 +12,7 @@ func Precompress(chars string, inputFilePath string, outputFilePath string) {
 
 	inputChars := strings.Split(chars, "")
 
+	// byte remap to lowest possible byte (0..n)
 	for idx, inputChar := range inputChars {
 		inputCharMap[inputChar] = byte(idx)
 	}
