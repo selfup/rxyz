@@ -7,18 +7,10 @@ import (
 	"strings"
 )
 
-func Precompress(inputFilePath string, outputFilePath string) {
+func Precompress(chars string, inputFilePath string, outputFilePath string) {
 	inputCharMap := make(map[string]byte)
 
-	charsInput, icErr := ioutil.ReadFile("chars/input.txt")
-
-	if icErr != nil {
-		log.Fatal(icErr)
-	}
-
-	trimmedInputChars := strings.Trim(string(charsInput), "\n")
-
-	inputChars := strings.Split(trimmedInputChars, "")
+	inputChars := strings.Split(chars, "")
 
 	for idx, inputChar := range inputChars {
 		inputCharMap[inputChar] = byte(idx)

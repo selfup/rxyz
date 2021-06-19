@@ -9,18 +9,10 @@ import (
 	"time"
 )
 
-func Generate(totalBytes int, inputFilePath string) {
+func Generate(charSet string, totalBytes int, inputFilePath string) {
 	rand.Seed(time.Now().UnixNano())
 
-	inputCharsFile, icerr := ioutil.ReadFile("chars/input.txt")
-
-	if icerr != nil {
-		log.Fatal(icerr)
-	}
-
-	trimmedInputChars := strings.Trim(string(inputCharsFile), "\n")
-
-	inputChars := strings.Split(trimmedInputChars, "")
+	inputChars := strings.Split(charSet, "")
 
 	log.Println("--- input chars length:", len(inputChars))
 
