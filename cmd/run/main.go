@@ -17,10 +17,10 @@ func main() {
 
 	fmt.Println("--- running files")
 
-	runTmp("cmd/test_data_generator.go")
-	runTmp("cmd/test_data_compressor.go")
-	runTmp("cmd/extract_and_precompress.go")
-	runTmp("cmd/gzip_precompressed_bytes.go")
+	runTmp("cmd/test_generator/main.go")
+	runTmp("cmd/test_compressor/main.go")
+	runTmp("cmd/precompress/main.go")
+	runTmp("cmd/gzip_precompressed_data/main.go")
 
 	fmt.Println("--- done")
 }

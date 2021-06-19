@@ -7,7 +7,7 @@ Just an experiment!
 ### Example Use
 
 ```
-$ go run cmd/run.go 
+$ go run cmd/run/main.go 
 --- running files
 2021/06/06 20:19:52 --- input chars length: 74
 2021/06/06 20:19:52 --- 11k of random random bytes written
