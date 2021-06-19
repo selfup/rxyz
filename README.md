@@ -6,7 +6,7 @@ It doesn't actually stand for anything..
 
 Just an experiment!
 
-### Example Use
+### Example Use in this repo
 
 ```
 $ go run main.go
