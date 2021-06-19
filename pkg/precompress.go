@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-func Precompress() {
+func Precompress(inputFilePath string, outputFilePath string) {
 	inputCharMap := make(map[string]byte)
 
 	charsInput, icErr := ioutil.ReadFile("chars/input.txt")
@@ -24,7 +24,7 @@ func Precompress() {
 		inputCharMap[inputChar] = byte(idx)
 	}
 
-	file, ferr := ioutil.ReadFile("fixtures/test_data.txt")
+	file, ferr := ioutil.ReadFile("fixtures/" + inputFilePath)
 
 	if ferr != nil {
 		log.Fatal(ferr)
@@ -38,7 +38,7 @@ func Precompress() {
 		output += string(inputCharMap[fileChar])
 	}
 
-	filePath := "fixtures/precompressed_data.txt"
+	filePath := "fixtures/" + outputFilePath
 	fileBytes := []byte(output)
 
 	var fileMode fs.FileMode = 0666

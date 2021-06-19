@@ -9,9 +9,7 @@ import (
 	"time"
 )
 
-func Generate() {
-	totalBytes := 11000
-
+func Generate(totalBytes int, inputFilePath string) {
 	rand.Seed(time.Now().UnixNano())
 
 	inputCharsFile, icerr := ioutil.ReadFile("chars/input.txt")
@@ -42,7 +40,7 @@ func Generate() {
 		output += char
 	}
 
-	filePath := "fixtures/test_data.txt"
+	filePath := "fixtures/" + inputFilePath
 	fileBytes := []byte(output)
 
 	var fileMode fs.FileMode = 0666
