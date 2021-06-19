@@ -1,4 +1,4 @@
-# RxYz
+# rxyz
 
 No third party deps. All std lib :)
 
@@ -20,7 +20,7 @@ $ go run main.go
 
 ### Example use as a lib
 
-_Same as main.go_
+Same as `main.go` in this repo:
 
 ```go
 package main
