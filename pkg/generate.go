@@ -5,11 +5,17 @@ import (
 	"io/ioutil"
 	"log"
 	"math/rand"
+	"os"
 	"strings"
 	"time"
 )
 
 func Generate(charSet string, totalBytes int, inputFilePath string) {
+	MkdirDashPErr := os.MkdirAll("fixtures", os.ModePerm)
+	if MkdirDashPErr != nil {
+		log.Fatal(MkdirDashPErr)
+	}
+
 	rand.Seed(time.Now().UnixNano())
 
 	inputChars := strings.Split(charSet, "")
