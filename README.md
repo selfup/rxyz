@@ -9,11 +9,11 @@ Just an experiment!
 ```
 $ go run cmd/run/main.go 
 --- running files
-2021/06/06 20:19:52 --- input chars length: 74
-2021/06/06 20:19:52 --- 11k of random random bytes written
-2021/06/06 20:19:53 --- Total payload byte size: 11000
-2021/06/06 20:19:53 --- Total output size: 8661
-2021/06/06 20:19:55 --- Total precompressed payload byte size: 11000
-2021/06/06 20:19:55 --- Total precompressed output size: 8655
+2021/06/19 09:55:15 --- input chars length: 74
+2021/06/19 09:55:15 --- 11000 random bytes written
+2021/06/19 09:55:16 --- Total payload byte size: 11000
+2021/06/19 09:55:16 --- Total output size: 8659
+2021/06/19 09:55:17 --- Total precompressed payload byte size: 11000
+2021/06/19 09:55:17 --- Total precompressed output size: 8652
 --- done
 ```
