@@ -7,7 +7,7 @@ import (
 	"log"
 )
 
-func Compress(inputFilePath string) {
+func Gzip(inputFilePath string) {
 	filePath := "fixtures/" + inputFilePath
 
 	file, _ := ioutil.ReadFile(filePath)
