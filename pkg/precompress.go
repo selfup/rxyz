@@ -25,18 +25,19 @@ func Precompress(chars string, inputFilePath string, outputFilePath string) {
 
 	fileChars := string(file)
 
-	output := ""
+	var output []byte
 
 	for _, fileChar := range strings.Split(fileChars, "") {
-		output += string(inputCharMap[fileChar])
+		charByte := inputCharMap[fileChar]
+
+		output = append(output, charByte)
 	}
 
 	filePath := "fixtures/" + outputFilePath
-	fileBytes := []byte(output)
 
 	var fileMode fs.FileMode = 0666
 
-	werr := ioutil.WriteFile(filePath, fileBytes, fileMode)
+	werr := ioutil.WriteFile(filePath, output, fileMode)
 
 	if werr != nil {
 		log.Fatal(werr)
