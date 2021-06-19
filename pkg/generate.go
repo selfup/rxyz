@@ -20,14 +20,14 @@ func Generate(charSet string, totalBytes int, inputFilePath string) {
 
 	inputChars := strings.Split(charSet, "")
 
-	log.Println("--- input chars length:", len(inputChars))
+	inputCharsLen := len(inputChars)
 
-	charsLen := len(inputChars)
+	log.Println("--- input chars length:", inputCharsLen)
 
 	output := ""
 
 	for i := 0; i < totalBytes; i++ {
-		idx := rand.Intn(charsLen)
+		idx := rand.Intn(inputCharsLen)
 
 		char := inputChars[idx]
 
