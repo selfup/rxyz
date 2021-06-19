@@ -10,6 +10,8 @@ import (
 )
 
 func main() {
+	totalBytes := 11000
+
 	rand.Seed(time.Now().UnixNano())
 
 	inputCharsFile, icerr := ioutil.ReadFile("chars/input.txt")
@@ -34,7 +36,7 @@ func main() {
 
 	output := ""
 
-	for i := 0; i < 11000; i++ {
+	for i := 0; i < totalBytes; i++ {
 		idx := rand.Intn(charsLen)
 
 		char := chars[idx]
@@ -53,5 +55,5 @@ func main() {
 		log.Fatal(err)
 	}
 
-	log.Print("--- 11k of random random bytes written")
+	log.Print("--- ", totalBytes, " random bytes written")
 }

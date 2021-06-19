@@ -20,7 +20,7 @@ func main() {
 	runTmp("cmd/test_data_generator.go")
 	runTmp("cmd/test_data_compressor.go")
 	runTmp("cmd/extract_and_precompress.go")
-	runTmp("cmd/precompressed_compressor.go")
+	runTmp("cmd/gzip_precompressed_bytes.go")
 
 	fmt.Println("--- done")
 }
