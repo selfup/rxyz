@@ -39,16 +39,18 @@ func main() {
 
 ### Busybox `time` benchmark
 
-```
-$ time go run main.go
-2021/06/21 10:26:03 --- input chars length: 74
-2021/06/21 10:26:03 --- 11000 random bytes written
-2021/06/21 10:26:03 --- fixtures/test.txt : 11000
-2021/06/21 10:26:03 --- fixtures/test.txt.gz : 8659
-2021/06/21 10:26:03 --- fixtures/precompressed.txt : 11000
-2021/06/21 10:26:03 --- fixtures/precompressed.txt.gz : 8652
+On compiled build `main`
 
-real    0m0.178s
-user    0m0.255s
-sys     0m0.093s
+```
+$ time ./main
+2021/06/21 11:54:09 --- input chars length: 74
+2021/06/21 11:54:09 --- 11000 random bytes written
+2021/06/21 11:54:09 --- fixtures/test.txt : 11000
+2021/06/21 11:54:09 --- fixtures/test.txt.gz : 8654
+2021/06/21 11:54:09 --- fixtures/precompressed.txt : 11000
+2021/06/21 11:54:09 --- fixtures/precompressed.txt.gz : 8647
+
+real    0m0.030s
+user    0m0.026s
+sys     0m0.017s
 ```
