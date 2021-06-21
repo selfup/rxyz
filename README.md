@@ -40,15 +40,15 @@ func main() {
 ### Busybox `time` benchmark
 
 ```
-$ time go run main.go 
-2021/06/19 11:10:20 --- input chars length: 74
-2021/06/19 11:10:20 --- 11000 random bytes written
-2021/06/19 11:10:20 --- fixtures/test.txt : 11000
-2021/06/19 11:10:20 --- fixtures/test.txt.gz : 8659
-2021/06/19 11:10:20 --- fixtures/precompressed.txt : 11000
-2021/06/19 11:10:20 --- fixtures/precompressed.txt.gz : 8653
+$ time go run main.go
+2021/06/21 10:26:03 --- input chars length: 74
+2021/06/21 10:26:03 --- 11000 random bytes written
+2021/06/21 10:26:03 --- fixtures/test.txt : 11000
+2021/06/21 10:26:03 --- fixtures/test.txt.gz : 8659
+2021/06/21 10:26:03 --- fixtures/precompressed.txt : 11000
+2021/06/21 10:26:03 --- fixtures/precompressed.txt.gz : 8652
 
-real    0m0.549s
-user    0m0.000s
-sys     0m0.000s
+real    0m0.178s
+user    0m0.255s
+sys     0m0.093s
 ```
